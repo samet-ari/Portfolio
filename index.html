@@ -54,25 +54,25 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">2022</div>
+                <div class="timeline-date">2025</div>
                 <div class="timeline-content">
-                    <h3>Smartcardlink</h3>
-                    <p>Développement d'une plateforme innovante qui permet de gérer des cartes de visite numériques. Intégration de QR codes, gestion de profils personnalisés et synchronisation cloud pour une expérience utilisateur optimale.</p>
+                    <h3>VPN</h3>
+                    <p>Déploiement d’un serveur VPN sécurisé avec OpenVPN sur Debian 12, incluant la génération de certificats et la configuration client.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
+                <div class="timeline-date">2025</div>
                 <div class="timeline-content">
-                    <h3>Security for Everyone</h3>
-                    <p>Conception et déploiement d'une plateforme de sécurité qui surveille en continu les menaces cybernétiques. Implémentation de système d'alertes temps réel, analyse comportementale et tableaux de bord de sécurité.</p>
+                    <h3>TrueNas Scale</h3>
+                    <p>TrueNAS Scale pour la gestion de stockage et de virtualisation, avec une interface web intuitive et des fonctionnalités avancées de gestion des données.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
+                <div class="timeline-date">2025</div>
                 <div class="timeline-content">
                     <h3>Infrastructure VOIP</h3>
                     <p>Mise en place d'une infrastructure VOIP complète avec Asterisk. Configuration de serveurs SIP, gestion de la qualité de service (QoS), intégration avec l'Active Directory et mise en place de la haute disponibilité.</p>
@@ -81,7 +81,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
+                <div class="timeline-date">2025</div>
                 <div class="timeline-content">
                     <h3>Analyse Réseau Wireshark</h3>
                     <p>Projet d'analyse approfondie des protocoles réseau avec Wireshark. Documentation complète du handshake TCP, analyse DNS, étude du modèle OSI avec captures d'écran détaillées et interprétation hexadécimale.</p>
@@ -144,7 +144,7 @@
         <form id="contactForm">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" name="name" placeholder="Votre Nom" required>
+                    <input type="text" name="name" placeholder="Votre Nom et Prenom(s)" required>
                     <input type="email" name="email" placeholder="Votre E-mail" required>
                 </div>
                 <div class="input-box">
@@ -180,7 +180,7 @@
         <div class="social">
             <a href="https://www.linkedin.com/in/sametar%C4%B1/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
             <a href="https://github.com/samet-ari" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href="mailto:samet.ari@email.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+            <a href="mailto:samet.ari@laplateforme.io" target="_blank"><i class='bx bxl-gmail'></i></a>
         </div>
         
         <ul class="list">
@@ -190,7 +190,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         
-        <p class="copyright">&copy; 2024 <span>Samet ARI</span> | Tous droits réservés.</p>
+        <p class="copyright">&copy; 2025 <span>Samet ARI</span> | Tous droits réservés.</p>
     </footer>
     <!------FOOTER END----------->  
 
@@ -259,50 +259,8 @@
             this.reset();
         });
 
-        // Typing animation
-        const typed = new Promise((resolve) => {
-            const textArray = [
-                "Administrateur Système et Réseaux",
-                "Expert en Cybersécurité",
-                "Passionné de Technologie"
-            ];
-            
-            let textIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typingSpeed = 100;
-            const deletingSpeed = 50;
-            const delayBetweenTexts = 2000;
-
-            function type() {
-                const currentText = textArray[textIndex];
-                const textElement = document.querySelector('.text-animation span');
-                
-                if (!textElement) return;
-
-                if (isDeleting) {
-                    textElement.textContent = currentText.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    textElement.textContent = currentText.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                let speed = isDeleting ? deletingSpeed : typingSpeed;
-
-                if (!isDeleting && charIndex === currentText.length) {
-                    speed = delayBetweenTexts;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    textIndex = (textIndex + 1) % textArray.length;
-                }
-
-                setTimeout(type, speed);
-            }
-
-            type();
-        });
+        // Typing animation - CSS kontrollü olduğu için JavaScript animasyonu devre dışı
+        // CSS animasyonu kullanılıyor
     </script>
 </body>
 </html>
